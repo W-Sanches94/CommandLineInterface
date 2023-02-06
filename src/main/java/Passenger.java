@@ -1,6 +1,6 @@
 import java.util.HashMap;
 
-public class Passenger {
+public class Passenger{
 
     private String name;
     private int personID;
@@ -8,7 +8,7 @@ public class Passenger {
 
     public Passenger(String name, int personID){
         this.name = name;
-        this.personID = personID;
+        this.personID = personID; // remove from constructor and call method here
         this.contactInfo = contactInfo;
     }
 
@@ -35,4 +35,10 @@ public class Passenger {
     public void setContactInfo(HashMap<Long, String> contactInfo) {
         this.contactInfo = contactInfo;
     }
+
+    // generate ID method
+    // check user is unique/ is it random?
+    // int generateID(){}
+    // UUID method
+
 }
