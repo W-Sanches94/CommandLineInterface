@@ -12,6 +12,10 @@ public class Flight {
         ArrayList<Passenger> passenger = new ArrayList<>();
     }
 
+    public ArrayList<Passenger> getPassenger() {
+        return passenger;
+    }
+
     public String getDestination() {
         return destination;
     }
