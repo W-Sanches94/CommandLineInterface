@@ -39,7 +39,7 @@ public class Main {
                 System.out.println();
                 if(airport.destinationExists(inputDestination)) {
                     System.out.println("Great choice, we will book you onto the flight to " + inputDestination);
-                    // addPassengerToFlight
+                    airport.addPassengerToFlight(passenger1,inputDestination);
 
                 }
             }

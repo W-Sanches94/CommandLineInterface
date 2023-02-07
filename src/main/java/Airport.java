@@ -51,6 +51,12 @@ public class Airport{
         //based on destination find flight
         // + check in person to flight.
         //if destinationExists then add passenger to flight.
+//        if(allFlights.contains(destination){
+        for (int i = 0 ; i < allFlights.size() ; i++ ){
+             allFlights.get(i).addPassenger(passenger);
+        }
+
+        }
 
         }
 

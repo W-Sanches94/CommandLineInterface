@@ -20,6 +20,7 @@ public class Flight{
         return destination;
     }
 
+
     public void setDestination(String destination) {
         this.destination = destination;
     }
@@ -32,4 +33,7 @@ public class Flight{
         this.flightID = flightID;
     }
 
+    public void addPassenger (Passenger passenger) {
+        passengersOnFlight.add(passenger);
+    }
 }
