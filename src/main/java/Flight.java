@@ -9,7 +9,7 @@ public class Flight{
     public Flight(String destination, int flightID) {
         this.destination = destination;
         this.flightID = flightID;
-        ArrayList<Passenger> passengersOnFLight = new ArrayList<>();
+        this.passengersOnFlight = new ArrayList<>();
     }
 
     public ArrayList<Passenger> getPassengersOnFlight() {
@@ -35,5 +35,9 @@ public class Flight{
 
     public void addPassenger (Passenger passenger) {
         passengersOnFlight.add(passenger);
+    }
+
+    public void removePassenger(Passenger passenger) {
+        passengersOnFlight.remove(passenger);
     }
 }

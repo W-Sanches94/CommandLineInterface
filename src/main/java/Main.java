@@ -16,7 +16,7 @@ public class Main {
         airport.addNewFlight(london);
         airport.addNewFlight(madrid);
         airport.addNewFlight(amsterdam);
-        System.out.println(airport.getListOfFlights());
+
 
         // prompt user for input
         System.out.println("Hello, please enter your name");
@@ -39,11 +39,38 @@ public class Main {
                 System.out.println();
                 if(airport.destinationExists(inputDestination)) {
                     System.out.println("Great choice, we will book you onto the flight to " + inputDestination);
-                    airport.addPassengerToFlight(passenger1,inputDestination);
-
+                    airport.bookFlight(passenger1,inputDestination);
+                    loop = false;
+                }
+                else {
+                    System.out.println("Sorry, that destination is not available, please select from the following:");
+                    airport.printDestinations();
                 }
             }
+            catch(Exception e){
+                System.out.println("Sorry, we could not proceed with your request. Please try again.");
+                System.out.println(e);
+                reader.nextLine();
+            }
         }
+
+        System.out.println("Your booking has been confirmed, how else may we be of assistance?");
+        String cancel = "cancel";
+        try {
+            String cancelRequest = reader.nextLine();
+            if(cancel.equals(cancelRequest)){
+                System.out.println("Please confirm your destination.");
+                String inputDest = reader.nextLine();
+                System.out.println("Your booking has been cancelled.");
+                airport.cancelBooking(passenger1,inputDest);
+            }
+        }
+        catch (Exception exception){
+            System.out.println("We cannot process your request");
+            System.out.println(exception);
+            reader.nextLine();
+        }
+
 
 
 
