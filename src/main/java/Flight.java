@@ -4,16 +4,18 @@ public class Flight {
 
     private String destination;
     private int flightID;
-    private ArrayList<Passenger> passenger;
+    private ArrayList<Passenger> passengersOnFlight;
 
     public Flight(String destination, int flightID) {
         this.destination = destination;
         this.flightID = flightID;
-        ArrayList<Passenger> passenger = new ArrayList<>();
+        ArrayList<Passenger> passengersOnFLight = new ArrayList<>();
     }
 
-    public ArrayList<Passenger> getPassenger() {
-        return passenger;
+
+
+    public ArrayList<Passenger> getPassengersOnFlight() {
+        return passengersOnFlight;
     }
 
     public String getDestination() {

@@ -20,11 +20,17 @@ public class Airport {
         allFlights.remove(flight);
     }
 
+    public String getListOfFlights(){ return this.allFlights.toString();}
+
+
     public void checkInPassenger(Passenger passenger){
         passengersInAirport.add(passenger);
     }
 
     public String addPassengerToFlight(Passenger passenger, Flight flight){
+
+
+
         // if passenger is checked in AND passenger is booked onto flight = true
         // add passenger to flight
         // return "passenger booked onto flight"
