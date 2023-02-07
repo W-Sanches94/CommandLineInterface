@@ -1,6 +1,6 @@
 import java.util.ArrayList;
 
-public class Flight {
+public class Flight{
 
     private String destination;
     private int flightID;

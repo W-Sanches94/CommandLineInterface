@@ -1,6 +1,6 @@
 import java.util.ArrayList;
 
-public class Airport {
+public class Airport{
 
     private ArrayList<Passenger> passengersInAirport;
     // private Passenger passenger;
@@ -12,6 +12,12 @@ public class Airport {
 
     }
 
+    public Flight getFlight(){
+        for (int i = 0 ; i < allFlights.size() ; i++ ){
+            return allFlights.get(i);
+        }
+    }
+
     public void addNewFlight(Flight flight){
         allFlights.add(flight);
     }
@@ -20,14 +26,34 @@ public class Airport {
         allFlights.remove(flight);
     }
 
-    public String getListOfFlights(){ return this.allFlights.toString();}
+    public void printDestinations(){
+        for (int i = 0 ; i < allFlights.size() ; i++ ){
+            System.out.println(allFlights.get(i).getDestination());
+        }
+
+    }
+
+    public boolean destinationExists(String destination){
+        for (int i = 0 ; i < allFlights.size() ; i++ ){
+            if (allFlights.get(i).getDestination().toLowerCase() == destination.toLowerCase()){
+                return true;
+            }
+        }
+        return false;
+    }
 
 
     public void checkInPassenger(Passenger passenger){
         passengersInAirport.add(passenger);
     }
 
-    public String addPassengerToFlight(Passenger passenger, Flight flight){
+    public void addPassengerToFlight(Passenger passenger, String destination){
+        //based on destination find flight
+        // + check in person to flight.
+        //if destinationExists then add passenger to flight.
+
+        }
+
 
 
 
@@ -39,7 +65,6 @@ public class Airport {
         // else, passenger is not checked in
         // return "remember to check in before your flight"
     }
-
 
 
 

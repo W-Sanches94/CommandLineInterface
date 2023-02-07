@@ -37,7 +37,7 @@ public class Main {
             try {
                 String inputDestination = reader.nextLine();
                 System.out.println();
-                if (airport.getListOfFlights().contains(inputDestination)){
+                if(airport.destinationExists(inputDestination)) {
                     System.out.println("Great choice, we will book you onto the flight to " + inputDestination);
                     // addPassengerToFlight
 
