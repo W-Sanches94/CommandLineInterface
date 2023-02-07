@@ -12,8 +12,6 @@ public class Flight {
         ArrayList<Passenger> passengersOnFLight = new ArrayList<>();
     }
 
-
-
     public ArrayList<Passenger> getPassengersOnFlight() {
         return passengersOnFlight;
     }

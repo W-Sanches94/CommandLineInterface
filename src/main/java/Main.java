@@ -25,7 +25,7 @@ public class Main {
         // randomID = randomID generator for setting ID to new passenger
 
         // create new passenger using input
-        Passenger passenger1 = new Passenger(passengerName,123); // this will take randomID
+        Passenger passenger1 = new Passenger(passengerName); // this will take randomID
 
         // check in new passenger
         airport.checkInPassenger(passenger1);

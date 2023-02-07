@@ -1,14 +1,17 @@
 import java.util.HashMap;
+import java.util.Random;
 
 public class Passenger{
 
     private String name;
+    private Random rand = new Random();
     private int personID;
     private HashMap<Long, String> contactInfo = new HashMap<Long, String>();
 
-    public Passenger(String name, int personID){
+
+    public Passenger(String name){
         this.name = name;
-        this.personID = personID; // remove from constructor and call method here
+        this.personID = rand.nextInt(1000,9999);; // remove from constructor and call method here
         this.contactInfo = contactInfo;
     }
 
@@ -38,7 +41,5 @@ public class Passenger{
 
     // generate ID method
     // check user is unique/ is it random?
-    // int generateID(){}
-    // UUID method
 
 }
