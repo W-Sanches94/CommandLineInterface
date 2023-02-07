@@ -7,4 +7,13 @@ public class Main {
         airport.checkInPassenger(new Passenger("Ed",123));
 
     }
+
+    /*sout("hello, please print name")
+    Scanner in = new Scanner(System.in)
+    String passengerName = in.nextLine()
+    passenger1.setName(passengerName)
+    + Random ID generator to setPassengerID
+    checkInPassenger(passenger1, 
+     */
+
 }
